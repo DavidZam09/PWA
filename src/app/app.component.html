@@ -1,0 +1,38 @@
+<div class="contenedor">
+  <mat-form-field>
+    <input matInput [(ngModel)]="valor1" type="number" name="valor1" placeholder="Ingrese el primer numero">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input type="number" name="valor2" matInput [(ngModel)]="valor2" placeholder="Ingrese el primer numero">
+  </mat-form-field>
+
+
+  <!-- <mat-form-field>
+    <mat-select placeholder="operaciones" [(ngModel)]="seleccionada" name="operaciones">
+      <mat-option *ngFor="let op of operaciones" [value]="op.valor">
+        {{op.muestraValor}}
+      </mat-option>
+
+    </mat-select>
+  </mat-form-field>
+-->
+  <mat-slide-toggle [(ngModel)]="opcion1">Sumar </mat-slide-toggle>
+  <mat-slide-toggle [(ngModel)]="opcion2">Restar </mat-slide-toggle>
+  <mat-slide-toggle [(ngModel)]="opcion3">Multiplicar</mat-slide-toggle>
+  <mat-slide-toggle [(ngModel)]="opcion4">Dividir </mat-slide-toggle>
+
+  
+  <button mat-raised-button color="primary" (click)="operar()">
+    Operar
+  </button>
+  <p>
+    <!--El resultado es:--> {{resultado}}
+  </p>
+
+  <mat-slider [(ngModel)]="slider1" thumbLabel (change)="cambiar()"></mat-slider>
+  <mat-slider [(ngModel)]="slider2" thumbLabel (change)="cambiar()"></mat-slider>
+  <mat-slider [(ngModel)]="slider3" thumbLabel (change)="cambiar()"></mat-slider>
+
+  la suma de los sliders es: {{suma}}
+</div>
